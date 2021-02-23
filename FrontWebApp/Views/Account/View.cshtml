@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FrontWebApp.Models.AccountViewModel>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountDue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentDueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountStatusId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountDue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountStatusId)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
